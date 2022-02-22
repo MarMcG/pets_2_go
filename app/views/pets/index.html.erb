@@ -6,13 +6,19 @@
     <div class="carde">
       <%= image_tag "pet_1.jpg" %>
       <div class="card-info">
-        <div class="card-title"><%= pet.title %></div>
-        <br>
-        <div class="card-name">My name is <%= pet.name %>!</div>
-        <div class="card-type">I'm a a <%= pet.pet_type %></div>
-        <div class="card-age">I'm <%= pet.age %> years old</div>
-        <div class="card-desc"><%= pet.descrption %></div>
-        <div class="card-rate"><%= pet.rate %>$/day</div>
+        <h3 class="card-title">My name is <span><%= pet.name%></span>!</h3>
+        <div class="justify-content-start d-flex">
+          <div>
+            <h4 class="card-name"><%= pet.title %></h4>
+            <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong></div>
+            <div class="card-age">- I'm <strong><%= pet.age %></strong> years old</div>
+            <div class="card-desc"><i>''<%= pet.description %>''</i></div>
+
+          </div>
+          <div>
+            <div class="card-rate"><%= pet.rate %><%= fa_icon "solid dollar"%>/day</div>
+          </div>
+        </div>
       </div>
     </div>
   <% end %>
