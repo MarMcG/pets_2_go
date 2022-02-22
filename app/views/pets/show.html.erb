@@ -1,2 +1,4 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<h1>SHOW<%= @pet.name %></h1>
+
+<%= link_to "back to index", pets_path %>
+<%= link_to "edit pet", edit_pet_path %>

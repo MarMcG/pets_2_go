@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.find(1)
+
 10.times do
-  pet = Pet.create!(name: Faker::Name.first_name)
+  pet = Pet.create!(name: Faker::Name.first_name, user: user)
   puts "#{pet.id}"
 end
 puts "all done"
