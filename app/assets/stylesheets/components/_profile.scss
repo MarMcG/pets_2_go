@@ -1,0 +1,42 @@
+.profile {
+  margin: 0 auto;
+  width: 360px;
+  background: $white;
+  box-shadow: $shadow;
+  text-align: center;
+}
+
+.profile img {
+  padding: 20px;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.profile h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+}
+
+.profile h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+}
+
+.profile p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: black;
+}
+
+.profile .profile-infos {
+  padding: 16px;
+}
