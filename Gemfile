@@ -35,6 +35,8 @@ gem 'font_awesome5_rails'
 # gem 'font_awesome_rails'
 gem 'simple_form'
 
+gem 'faker'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
