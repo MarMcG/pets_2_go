@@ -16,12 +16,15 @@
             <%= link_to "Home", root_path, class: "nav-pet-link" %>
           </li>
           <li class="nav-item d-flex align-items-center">
+            <%= link_to "Pets", pets_path, class: "nav-pet-link" %>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <%= link_to "List Pet", new_pet_path, class: "nav-pet-link nav-pet-new" %>
           </li>
           <li class="nav-item d-flex align-items-center dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end pet-drop" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Profile", profile_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>

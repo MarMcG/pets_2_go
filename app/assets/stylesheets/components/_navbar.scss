@@ -13,12 +13,25 @@
   padding: 8px 12px;
   border-radius: $border-radius-sm;
   margin: 0 4px;
+  font-weight: bold;
   transition: $transition-short;
   &:hover{
     padding: 8px 14px;
     background-color: $orange;
     color: $black;
     transition: $transition-long;
+  }
+}
+
+.nav-pet-new{
+  background-color: $white;
+  padding: 10px 14px;
+  border-radius: $border-radius-lg 0 $border-radius-lg 0;
+
+  border: $border-primary;
+  &:hover{
+    border-radius:  $border-radius-lg;
+    color: $white;
   }
 }
 
