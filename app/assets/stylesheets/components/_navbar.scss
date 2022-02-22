@@ -9,8 +9,17 @@
 
 .nav-pet-link{
   text-decoration: none;
-  font-size: 24px;
-  padding: 16px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: $border-radius-sm;
+  margin: 0 4px;
+  transition: $transition-short;
+  &:hover{
+    padding: 8px 14px;
+    background-color: $orange;
+    color: $black;
+    transition: $transition-long;
+  }
 }
 
 .Logo{
@@ -24,4 +33,19 @@
     margin:0;
     font-size: 2em;
   }
+}
+
+.pet-drop{
+  margin-top: 16px !important;
+  background: $gray;
+  text-align: end;
+  border-radius: 4px;
+  // transform: translateX(16px);
+  a{
+    color: $black;
+    &:hover{
+      background: $white;
+    }
+  }
+
 }
