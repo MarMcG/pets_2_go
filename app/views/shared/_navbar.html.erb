@@ -13,10 +13,9 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item d-flex align-items-center active">
-            <%= link_to "Home", "#", class: "nav-pet-link" %>
+            <%= link_to "Home", root_path, class: "nav-pet-link" %>
           </li>
           <li class="nav-item d-flex align-items-center">
-            <%= link_to "Messages", "#", class: "nav-pet-link" %>
           </li>
           <li class="nav-item d-flex align-items-center dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
