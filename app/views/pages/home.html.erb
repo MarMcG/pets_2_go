@@ -1,18 +1,35 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to  'logout', destroy_user_session_path, method: :delete %>
-<div class="btn btn-primary">My button</div>
-<%= fa_icon "solid dragon"%>
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag "pet_1.jpg", class: "d-block w-100", alt: "First slide" %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "pet_1.jpg", class: "d-block w-100", alt: "Second slide" %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "pet_1.jpg", class: "d-block w-100", alt: "Third slide" %>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/e8/fe/d8/e8fed8ffd6f039286f0ff57ae888999d.jpg);">
+  <div class="container">
+    <h1>PETS2GO</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem laudantium, fugit aliquam error labore vero doloremque eum quo, cum sint laboriosam iure amet in fugiat asperiores corporis voluptates! Cum, culpa!</p>
+    <a class="btn btn-ghost" href="#">Discover now</a>
   </div>
 </div>
+
+<h2>Trending pets</h2>
+
+<div class="cards">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg)">
+    Please take me!!
+  </div>
+
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2021-05/snake-3979601_1920.jpg?itok=tw3B0pYY)">
+    Sometimes i like to taste humans
+  </div>
+
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.wsj.net/im-355811?width=1280&size=1)">
+    How you douing
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
