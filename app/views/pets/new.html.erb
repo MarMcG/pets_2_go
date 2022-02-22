@@ -2,6 +2,10 @@
 <p>Find me in app/views/pets/new.html.erb</p>
 
 <%= simple_form_for(@pet) do |f| %>
+  <%= f.input :pet_type %>
   <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :description %>
+  <%= f.input :location %>
   <%= f.submit %>
 <% end %>
