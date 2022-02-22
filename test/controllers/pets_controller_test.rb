@@ -35,4 +35,5 @@ class PetsControllerTest < ActionDispatch::IntegrationTest
     get pets_update_url
     assert_response :success
   end
+
 end
