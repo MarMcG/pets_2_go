@@ -1,12 +1,64 @@
-.navbar-lewagon {
+.navbar-pet {
   justify-content: space-between;
-  background: white;
+  background: $black;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-pet .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-pet-link{
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: $border-radius-sm;
+  margin: 0 4px;
+  font-weight: bold;
+  transition: $transition-short;
+  &:hover{
+    padding: 8px 14px;
+    background-color: $orange;
+    color: $black;
+    transition: $transition-long;
+  }
+}
+
+.nav-pet-new{
+  background-color: $white;
+  padding: 10px 14px;
+  border-radius: $border-radius-lg 0 $border-radius-lg 0;
+
+  border: $border-primary;
+  &:hover{
+    border-radius:  $border-radius-lg;
+    color: $white;
+  }
+}
+
+.Logo{
+  text-decoration: none;
+
+  i{
+    padding: 4px 16px;
+    font-size: 40px;
+  }
+  h2{
+    margin:0;
+    font-size: 2em;
+  }
+}
+
+.pet-drop{
+  margin-top: 16px !important;
+  background: $gray;
+  text-align: end;
+  border-radius: 4px;
+  // transform: translateX(16px);
+  a{
+    color: $black;
+    &:hover{
+      background: $white;
+    }
+  }
+
 }
