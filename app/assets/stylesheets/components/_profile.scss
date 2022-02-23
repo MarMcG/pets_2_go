@@ -1,5 +1,4 @@
 .profile {
-  margin: 0 auto;
   width: 360px;
   background: $white;
   box-shadow: $shadow;
@@ -39,4 +38,19 @@
 
 .profile .profile-infos {
   padding: 16px;
+}
+
+.card-list {
+  margin: 0 auto;
+  width: 360px;
+  background: $white;
+  box-shadow: $shadow;
+  text-align: center;
+}
+.card-pet {
+  margin: 0 auto;
+  width: 360px;
+  background: $white;
+  box-shadow: $shadow;
+  text-align: center;
 }
