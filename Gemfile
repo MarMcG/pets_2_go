@@ -36,6 +36,7 @@ gem 'font_awesome5_rails'
 gem 'simple_form'
 
 gem 'faker'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'pry-byebug'
