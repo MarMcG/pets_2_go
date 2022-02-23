@@ -8,11 +8,13 @@
       PET2GO allows people to search for pets for rent or simply list their pet.
       It helps connect all kind of animals, owners and borrowers who just want some company.
     </p>
-    <a class="btn btn-ghost" href="#">List pet</a>
+
+    <%= link_to "List pet", new_pet_path, class: "btn btn-ghost" %>
   </div>
 </div>
 
-<h2>Trending pets</h2>
+  <h2 class="text-center">Trending pets</h2>
+
 
 <div class="cards">
   <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg)">
@@ -20,7 +22,7 @@
   </div>
 
   <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2021-05/snake-3979601_1920.jpg?itok=tw3B0pYY)">
-    Sometimes i like to taste humans
+    Looking for a friend
   </div>
 
   <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.wsj.net/im-355811?width=1280&size=1)">
