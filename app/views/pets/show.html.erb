@@ -2,7 +2,7 @@
 <%= link_to "edit pet", edit_pet_path %>
 
 <div class="container show-box">
-  <%= image_tag "pet_1.jpg" %>
+  <%= cl_image_tag @pet.photo.key%>
   <div class="p-2 bd-highlight">
     <div class="card-info">
       <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
