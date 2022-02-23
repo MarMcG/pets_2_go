@@ -46,7 +46,11 @@
 }
 
 .card-desc{
-  width: 100%;
+  width: fit-content;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   height: 64px;
   font-size: 0.9em;
   color: $dark-gray;
@@ -56,13 +60,13 @@
 }
 
 .card-rate {
-
+  font-weight: bold;
   color: $dark-gray;
   margin-top: 14px;
   span{
     background:$orange;
     color: $white;
-    font-weight: bold;
+
     padding: 6px 8px;
     margin-right: 2px;
   }
