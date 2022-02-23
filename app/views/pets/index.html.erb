@@ -5,8 +5,7 @@
   <div class="cardes">
     <% @pets.each do |pet|%>
       <%= link_to pet_path(pet), class: "carde" do %>
-        <%# <%= cl_image_tag pet.photo.key%>
-                <%= image_tag 'pet_1.jpg'%>
+        <%= cl_image_tag pet.photo.key%>
         <div class="card-info">
           <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
           <h4 class="card-title"><%= pet.title %></h4>
