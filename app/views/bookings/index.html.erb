@@ -1,4 +1,7 @@
 <h1>Bookings index</h1>
 <% @user_bookings.each do |a| %>
 <h2><%= a.id %></h2>
+<h2><%= a.pet.name %></h2>
+<h2><%= a.start_date %></h2>
+<h2><%= a.end_date %></h2>
 <% end %>
