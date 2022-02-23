@@ -1,6 +1,11 @@
 .cardes{
-  width: 640px;
+  min-width: 640px;
   margin: 16px;
+}
+
+.map{
+  max-width: fit-content;
+  padding: 16px
 }
 
 .carde{
@@ -11,9 +16,11 @@
   height: 256px;
   margin-bottom: 16px;
   img{
+    flex-grow: 1;
     height: 100%;
     object-fit: cover;
-    width: 256px;
+    max-width: 256px !important;
+    min-width: 256px !important;
     padding: 8px 0px 8px 8px;
   }
 }
@@ -23,8 +30,8 @@
 }
 
 .card-info{
-  padding: 0 16px;
   flex-grow: 1;
+  padding: 0 16px;
 }
 
 
@@ -46,23 +53,27 @@
 }
 
 .card-desc{
-  width: 100%;
+  // width: fit-content;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   height: 64px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: $dark-gray;
   background: $gray;
-  padding: 8px 12px;
+  padding: 4px 12px;
   border-left: 3px solid $dark-gray;
 }
 
 .card-rate {
-
+  font-weight: bold;
   color: $dark-gray;
   margin-top: 14px;
   span{
     background:$orange;
     color: $white;
-    font-weight: bold;
+
     padding: 6px 8px;
     margin-right: 2px;
   }
