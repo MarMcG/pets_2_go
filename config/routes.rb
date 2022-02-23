@@ -6,7 +6,14 @@ Rails.application.routes.draw do
   end
 	resources :pets do
   end
+  resources :bookings, only: [:new, :create, :destroy]
+
+  # get '/bookings/new', to: 'bookings#new'
+  # post '/bookings', to: 'bookings#create'
+
+  # get '/bookings', to: 'bookings#show'
 
   get '/profile', to: 'users#show'
-	
+
+
 end

@@ -1,19 +1,17 @@
 class BookingsController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :set_booking, only: [:show, :update]
+  before_action :set_booking, only: [:show, :update, :new]
 
   def show; end
 
   def new
     @booking = Booking.new
-    @offer = Offer.where(id: params[:offer_id]).first
+
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @offer = Offer.where(id: params[:offer_id]).first
-    @booking.offer = @offer
     @booking.user = current_user
 
     if @booking.save
@@ -42,7 +40,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :confirmed)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 
 end
