@@ -4,8 +4,10 @@
 }
 
 .map{
-  max-width: fit-content;
-  padding: 16px
+  flex-grow: 1;
+  height: auto;
+  padding: 16px;
+  object-fit: cover;
 }
 
 .carde{
