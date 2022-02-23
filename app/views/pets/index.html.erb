@@ -1,23 +1,27 @@
-<h1>Pets#index</h1>
-<p>Find me in app/views/pets/index.html.erb</p>
+<h1 class="text-center">Pets</h1>
+<p></p>
 
-<div class="cardes">
-  <% @pets.each do |pet|%>
-    <%= link_to pet_path(pet), class: "carde" do %>
-      <%= image_tag pet.img_url %>
-      <div class="card-info">
-        <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
-        <h4 class="card-title"><%= pet.title %></h4>
-        <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
-        <div class="card-desc"><i>''<%= pet.description %>''</i></div>
-        <div class="card-rate"><span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day</div>
-      </div>
+<div class="d-flex">
+  <div class="cardes">
+    <% @pets.each do |pet|%>
+      <%= link_to pet_path(pet), class: "carde" do %>
+        <%= cl_image_tag pet.photo.key%>
+        <div class="card-info">
+          <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
+          <h4 class="card-title"><%= pet.title %></h4>
+          <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
+          <div class="card-desc"><i>''<%= pet.description %>''</i></div>
+          <div class="card-rate"><span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day</div>
+        </div>
+      <% end %>
+      <%# <div class="carde">
+
+      </div> %>
     <% end %>
-    <%# <div class="carde">
-
-    </div> %>
-  <% end %>
+  </div>
+  <%= image_tag "Map.jpg", class: "map"%>
 </div>
+
 
       <%# <%= link_to 'Show', pet %>
       <%#<%= link_to "destroy_pet", pet_path(pet), method: :delete, data: { confirm: "You sure?" } %>

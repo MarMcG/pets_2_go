@@ -36,7 +36,10 @@ gem 'font_awesome5_rails'
 gem 'simple_form'
 
 gem 'faker'
+
+#cloudinary
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
   gem 'pry-byebug'
