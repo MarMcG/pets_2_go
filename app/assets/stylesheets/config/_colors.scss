@@ -15,3 +15,7 @@ $shadow: 2px 2px 6px rgba(251, 251, 255, 0.2);
 $border-primary: 2px solid $orange;
 $transition-short: 100ms;
 $transition-long: 200ms;
+
+@mixin border-light($side: bottom) {
+  border-#{$side}: 0.7px solid rgba(0, 0, 0, 0.1);
+}
