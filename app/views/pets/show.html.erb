@@ -1,4 +1,23 @@
-<h1>SHOW<%= @pet.name %></h1>
-
 <%= link_to "back to index", pets_path %>
 <%= link_to "edit pet", edit_pet_path %>
+
+<div class="container show-box">
+  <%= image_tag "pet_1.jpg" %>
+  <div class="p-2 bd-highlight">
+    <div class="card-info">
+      <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
+      <h4 class="card-title"><%= @pet.title %></h4>
+      <div class="card-type">
+        - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
+      </div>
+      <div class="card-desc">
+        <i>''<%= @pet.description %>''</i>
+      </div>
+      <div class="card-rate">
+        <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to "edit pet", new_user_booking_path%>
