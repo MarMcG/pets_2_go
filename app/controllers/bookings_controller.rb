@@ -2,10 +2,11 @@ class BookingsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_booking, only: [:destroy]
+  before_action :set_pet, only: [:new, :create, :show]
 
   def new
     @booking = Booking.new
-    set_pet
+    @booking.pet = @pet
   end
 
   def create
