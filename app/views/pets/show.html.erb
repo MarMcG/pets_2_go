@@ -1,5 +1,4 @@
 <%= link_to "back to index", pets_path %>
-<%= link_to "edit pet", edit_pet_path %>
 
 <div class="container show-box">
   <%= cl_image_tag @pet.photo.key%>
@@ -21,4 +20,3 @@
 </div>
 
 <%= link_to "Book Pet", new_pet_booking_path(@pet)%>
-<%= link_to "Edit Pet", edit_pet_path %>
