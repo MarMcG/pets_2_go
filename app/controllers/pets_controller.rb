@@ -46,6 +46,7 @@ class PetsController < ApplicationController
       {
         lat: pet.latitude,
         lng: pet.longitude,
+        image_url: helpers.asset_url("marker_3.png")
       }
     end
   end
