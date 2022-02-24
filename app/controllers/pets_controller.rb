@@ -70,3 +70,5 @@ class PetsController < ApplicationController
     params.require(:pet).permit(:pet_type, :name, :age, :description, :address, :photo, :rate)
   end
 end
+
+#why this does not work
