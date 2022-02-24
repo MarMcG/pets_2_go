@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-  # def index
-
-  # end
+  def index
+    user_pets
+  end
 
   def new
     @user = User.new
