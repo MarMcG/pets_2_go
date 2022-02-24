@@ -1,10 +1,11 @@
-
-<%= simple_form_for(@pet) do |f| %>
-  <%= f.input :pet_type %>
-  <%= f.input :name %>
-  <%= f.input :age %>
-  <%= f.input :description %>
-  <%= f.input :rate %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="form-center">
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :pet_type, class: 'my-input' %>
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :description %>
+    <%= f.input :rate %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
