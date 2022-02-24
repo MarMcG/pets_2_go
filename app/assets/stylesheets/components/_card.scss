@@ -1,13 +1,16 @@
 .cardes{
   min-width: 640px;
+  width: 640px;
   margin: 16px;
 }
 
-.map{
+#map{
   flex-grow: 1;
-  height: auto;
-  margin: 16px;
-  object-fit: cover;
+
+  // height: auto;
+  // margin: 16px;
+  // object-fit: cover;
+  border: 1px solid red;
 }
 
 .carde{
@@ -78,5 +81,21 @@
 
     padding: 6px 8px;
     margin-right: 2px;
+  }
+}
+
+.card-v {
+  text-decoration: none;
+  background-color: $white;
+  color: $black;
+  margin-bottom: 16px;
+  img{
+    object-fit: cover;
+    max-width: 256px !important;
+    min-width: 256px !important;
+    padding: 8px 8px 8px 8px;
+  }
+  type{
+    margin: 0;
   }
 }

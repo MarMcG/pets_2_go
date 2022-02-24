@@ -34,7 +34,7 @@ gem 'font-awesome-sass'
 gem 'font_awesome5_rails'
 # gem 'font_awesome_rails'
 gem 'simple_form'
-
+gem "geocoder"
 gem 'faker'
 
 #cloudinary
