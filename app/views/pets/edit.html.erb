@@ -3,6 +3,10 @@
 <%= link_to "back to pet", pet_path  %>
 <%= link_to "destroy_pet", pet_path, method: :delete, data: { confirm: "You sure?" } %>
 <%= simple_form_for(@pet) do |f| %>
+<%= f.input :pet_type %>
 <%= f.input :name %>
+<%= f.input :age %>
+<%= f.input :description %>
+<%= f.input :rate %>
 <%= f.submit %>
 <% end %>
