@@ -1,6 +1,9 @@
 class Pet < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
+  validates :pet_type, :name, :description, :age, :photo, :address, presence: true
 
-  validates :pet_type, :name, :description, :age, :rate, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
 end

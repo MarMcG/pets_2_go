@@ -2,7 +2,6 @@ class PetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
-
   def new
     @pet = Pet.new
   end
@@ -42,12 +41,20 @@ class PetsController < ApplicationController
   end
 
   private
+  def markers
+    @markers = @pets.geocoded.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude,
+      }
+    end
+  end
 
   def set_pet
     @pet = Pet.find(params[:id])
   end
 
   def pet_params
-    params.require(:pet).permit(:pet_type, :name, :age, :description, :rate, :photo)
+    params.require(:pet).permit(:pet_type, :name, :age, :description, :address, :photo, :rate)
   end
 end
