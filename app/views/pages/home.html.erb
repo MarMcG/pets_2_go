@@ -17,18 +17,9 @@
 
 
 <div class="cards">
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg)">
-    Please take me!!
-  </div>
-
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2021-05/snake-3979601_1920.jpg?itok=tw3B0pYY)">
-    Looking for a friend
-  </div>
-
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.wsj.net/im-355811?width=1280&size=1)">
-    How you douing
-  </div>
+  <%= render 'shared/home-card', pets: @pets %>
 </div>
+
 
 <div class="footer">
   <div class="footer-links">

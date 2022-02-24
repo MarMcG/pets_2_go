@@ -76,3 +76,19 @@
     margin-right: 2px;
   }
 }
+
+.card-v {
+  text-decoration: none;
+  background-color: $white;
+  color: $black;
+  margin-bottom: 16px;
+  img{
+    object-fit: cover;
+    max-width: 256px !important;
+    min-width: 256px !important;
+    padding: 8px 8px 8px 8px;
+  }
+  type{
+    margin: 0;
+  }
+}
