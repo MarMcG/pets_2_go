@@ -21,6 +21,11 @@ class PetsController < ApplicationController
   def edit
   end
 
+  def destroy
+    @pet.destroy
+    redirect_to pets_path, notice: "Pet was succefully deleted"
+  end
+
   def index
     @pets = Pet.all
     markers
