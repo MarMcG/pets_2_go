@@ -1,5 +1,5 @@
-<%= link_to "back to index", pets_path %>
-<%= link_to "edit pet", edit_pet_path %>
+<%= link_to "back", pets_path, class: "btn btn-back" %>
+<%# <%= link_to "edit pet", edit_pet_path %>
 
 <div class="container show-box">
   <%= cl_image_tag @pet.photo.key%>
@@ -15,10 +15,11 @@
       </div>
       <div class="card-rate">
         <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+        <%= link_to "Book Pet", new_pet_booking_path(@pet), class: "btn btn-ghost"%>
       </div>
     </div>
   </div>
 </div>
 
-<%= link_to "Book Pet", new_pet_booking_path(@pet)%>
-<%= link_to "Edit Pet", edit_pet_path %>
+
+<%# <%= link_to "Edit Pet", edit_pet_path %>
