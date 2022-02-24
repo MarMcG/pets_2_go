@@ -70,5 +70,3 @@ class PetsController < ApplicationController
     params.require(:pet).permit(:pet_type, :name, :age, :description, :address, :photo, :rate)
   end
 end
-
-# comment to save again
