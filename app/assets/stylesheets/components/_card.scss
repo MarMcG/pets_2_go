@@ -1,13 +1,16 @@
 .cardes{
   min-width: 640px;
+  width: 640px;
   margin: 16px;
 }
 
-.map{
+#map{
   flex-grow: 1;
-  height: auto;
-  margin: 16px;
-  object-fit: cover;
+
+  // height: auto;
+  // margin: 16px;
+  // object-fit: cover;
+  border: 1px solid red;
 }
 
 .carde{
