@@ -27,6 +27,8 @@ class PetsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
+    @booking.pet = @pet
   end
 
 

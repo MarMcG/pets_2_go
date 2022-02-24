@@ -1,8 +1,8 @@
 
 <%= link_to "back", pets_path, class: "btn btn-back" %>
 
-
-<div class="container show-box">
+<div class="container d-flex">
+  <div class="show-box">
   <%= cl_image_tag @pet.photo.key%>
   <div class="p-2 bd-highlight">
     <div class="card-info">
@@ -16,13 +16,21 @@
       </div>
       <div class="card-rate">
         <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
-        <%= link_to "Book Pet", new_pet_booking_path(@pet), class: "btn btn-ghost"%>
       </div>
     </div>
   </div>
 </div>
+  <div class="book-box">
+    <div class="container">
 
-
-<%= link_to "Book Pet", new_pet_booking_path(@pet)%>
-
-
+      <%= simple_form_for([@pet, @booking]) do |f| %>
+      <h1 class="text-center">New booking</h1>
+        <h5 class="form-title" >From: </h5>
+        <%= f.input :start_date, class: "input_field" %>
+        <h5 class="form-title">To:  </h5>
+        <%= f.input :end_date, class: "input_field" %>
+        <%= f.submit 'BOOK PET' %>
+      <% end %>
+    </div>
+  </div>
+</div>

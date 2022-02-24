@@ -12,11 +12,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item d-flex align-items-center active">
-            <%= link_to "Home", root_path, class: "nav-pet-link" %>
-          </li>
           <li class="nav-item d-flex align-items-center">
             <%= link_to "Pets", pets_path, class: "nav-pet-link" %>
+          </li>
+          <li class="nav-item d-flex align-items-center active">
+            <%= link_to "My Pets", my_pets_path, class: "nav-pet-link" %>
           </li>
           <li class="nav-item d-flex align-items-center">
             <%= link_to "List Pet", new_pet_path, class: "nav-pet-link nav-pet-new" %>
