@@ -29,7 +29,6 @@ class PetsController < ApplicationController
   def show
   end
 
-
   def destroy
     @pet.destroy
     redirect_to pets_path, notice: "Pet was succefully deleted"
@@ -71,3 +70,5 @@ class PetsController < ApplicationController
     params.require(:pet).permit(:pet_type, :name, :age, :description, :address, :photo, :rate)
   end
 end
+
+# comment to save again
