@@ -40,6 +40,13 @@ class PetsController < ApplicationController
     end
   end
 
+  def my_pets
+    @pets = Pet.where(user_id: current_user.id)
+    @bookings = @pets.map do |pet|
+     [pet, Booking.where(user: current_user, pet: pet)]
+    end
+  end
+
   private
   def markers
     @markers = @pets.geocoded.map do |pet|

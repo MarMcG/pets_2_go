@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
+  get 'my_pets', to: 'pets#my_pets', as: :my_pets
+
+  resources :my_pets, only: [:show] do
+    resources :bookings, only: [:index, :show]
+  end
+  resources :bookings, only: [:show, :index]
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users do
     resources :bookings

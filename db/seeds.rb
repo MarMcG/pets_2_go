@@ -37,4 +37,4 @@ Booking.destroy_all
 #   end
 # end
 
-# puts "all done"
+puts "all done"

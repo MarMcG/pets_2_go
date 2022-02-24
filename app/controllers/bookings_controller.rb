@@ -24,11 +24,10 @@ class BookingsController < ApplicationController
   end
 
   def index
-    user_bookings
+    @bookings = Booking.all
   end
 
   def show; end
-
 
   def user_bookings
     @user_bookings = Booking.where(user_id: current_user.id)
@@ -45,7 +44,6 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    raise
     @booking = Booking.find(params[:id])
   end
 
