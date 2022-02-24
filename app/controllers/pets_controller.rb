@@ -9,7 +9,7 @@ class PetsController < ApplicationController
   def create
     @pet = Pet.new(pet_params)
     @pet.user = current_user
-    raise
+
     if @pet.save!
       redirect_to @pet, notice: 'Pet was successfully created.'
 
@@ -46,7 +46,7 @@ class PetsController < ApplicationController
   def my_pets
     @pets = Pet.where(user_id: current_user.id)
     @bookings = @pets.map do |pet|
-     [pet, Booking.where(user: current_user, pet: pet)]
+    [pet, Booking.where(user_id: current_user, pet: pet)]
     end
   end
 
