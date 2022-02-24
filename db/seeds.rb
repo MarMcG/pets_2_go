@@ -8,6 +8,7 @@
 
 Pet.destroy_all
 User.destroy_all
+Booking.destroy_all
 # users = []
 # 5.times do
 #   users << User.create!(
