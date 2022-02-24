@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :my_pets, only: [:show] do
     resources :bookings, only: [:index, :show]
   end
-  resources :bookings, only: [:show, :index]
+  resources :bookings, only: [:show, :index, :destroy]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users do
