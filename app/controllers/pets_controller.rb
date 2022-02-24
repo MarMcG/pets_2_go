@@ -9,8 +9,10 @@ class PetsController < ApplicationController
   def create
     @pet = Pet.new(pet_params)
     @pet.user = current_user
+
     if @pet.save!
       redirect_to @pet, notice: 'Pet was successfully created.'
+
     else
       render :new, notice: 'Listing unsuccessful. Please try again.'
     end
@@ -21,6 +23,7 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    markers
   end
 
   def show
@@ -43,7 +46,7 @@ class PetsController < ApplicationController
   def my_pets
     @pets = Pet.where(user_id: current_user.id)
     @bookings = @pets.map do |pet|
-     [pet, Booking.where(user: current_user, pet: pet)]
+    [pet, Booking.where(user_id: current_user, pet: pet)]
     end
   end
 
@@ -55,7 +58,9 @@ class PetsController < ApplicationController
         lng: pet.longitude,
         image_url: helpers.asset_url("marker_3.png")
       }
+
     end
+    # raise
   end
 
   def set_pet
