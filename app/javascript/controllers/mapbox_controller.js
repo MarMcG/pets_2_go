@@ -1,6 +1,6 @@
 // app/javascript/controllers/mapbox_controller.js
 import { Controller } from "@hotwired/stimulus"
-import mapboxgl from "mapbox-gl"
+import mapboxgl, { Marker } from "mapbox-gl"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 export default class extends Controller {
@@ -25,9 +25,14 @@ export default class extends Controller {
   }
 
 
+  select(){
+    console.log("helo")
+  }
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
+
       const customMarker = document.createElement("div")
+        customMarker.setAttribute('data-action', 'click->mapbox#select')
         customMarker.className = "marker"
         customMarker.style.backgroundImage = `url('${marker.image_url}')`
         customMarker.style.backgroundSize = "contain"
