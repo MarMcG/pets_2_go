@@ -1,45 +1,41 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-content: space-between;
-}
+
 .profile {
-  width: 260px;
+  width: 100%;
   background: $white;
   box-shadow: $shadow;
   text-align: center;
+  img{
+    padding: 20px;
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
 }
 
-.profile img {
-  padding: 20px;
-  height: 120px;
-  width: 120px;
-  object-fit: cover;
-  margin: 0 auto;
-}
+// .profile{
+//   h2, h3{
+//     font-size: 16px;
+//     font-weight: bold;
+//     margin: 0;
+//     color: $black;
+//   }
+// }
 
+// .profile p, .pet-descrition p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 10px;
+//   margin-top: 8px;
+//   color: black;
+// }
 
-.profile h2, .profile h3 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  color: black;
-}
-
-.profile p, .pet-descrition p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 10px;
-  margin-top: 8px;
-  color: black;
-}
-
-.pet-descrition {
-  flex-grow: 1;
-  margin: 0 20px;
-  width: 260px;
-  background: $white;
-  box-shadow: $shadow;
-  text-align: center;
-}
+// .pet-descrition {
+//   flex-grow: 1;
+//   margin: 0 20px;
+//   width: 260px;
+//   background: $white;
+//   box-shadow: $shadow;
+//   text-align: center;
+// }
