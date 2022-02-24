@@ -1,15 +1,67 @@
+/* From cssbuttons.io */
 .btn-ghost {
+  padding: 1em 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
   color: white;
-  padding: 16px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-  background: #ee7321;
-  transition: background 0.3s ease;
-}
-.btn-ghost:hover {
-  opacity: 1;
-  background: white;
-  text-decoration: none;
-  color: #ee7321;
-  // color: rgb(44, 43, 43);
-}
+  background-color: $black;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+ }
+
+ .btn-ghost:hover {
+  background-color: #ee7321;
+  box-shadow: 0px 15px 20px rgba(252, 147, 18, 0.365);
+  color: #fff;
+  transform: translateY(-7px);
+ }
+
+.btn-ghost:active {
+  transform: translateY(-1px);
+ }
+
+
+ .btn-back {
+  padding: 8px 12px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+
+ .btn-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+
+ .btn-back:hover {
+  color: #e8e8e8;
+ }
+
+ .btn-back:hover::before {
+  width: 100%;
+ }
