@@ -58,6 +58,7 @@ class PetsController < ApplicationController
         lng: pet.longitude,
         image_url: helpers.asset_url("marker_3.png")
       }
+
     end
     # raise
   end
