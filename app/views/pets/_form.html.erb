@@ -1,14 +1,22 @@
 
 
   <%= simple_form_for(@pet) do |f| %>
+    <h1 class="text-center">New Pet</h1>
+    <h5 class="form-title" >Pet type: </h5>
     <%= f.input :pet_type %>
+    <h5 class="form-title" >Name: </h5>
     <%= f.input :name %>
+    <h5 class="form-title" >Age: </h5>
     <%= f.input :age %>
+    <h5 class="form-title" >Description: </h5>
     <%= f.input :description %>
+    <h5 class="form-title" >Address: </h5>
     <%= f.input :address,
                 input_html: { data: { geocoder_target: "address" } },
                 wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+    <h5 class="form-title" >Rate: </h5>
     <%= f.input :rate %>
+    <h5 class="form-title" >Photo: </h5>
     <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>

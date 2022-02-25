@@ -9,6 +9,7 @@
 
 #map {
   position: sticky;
+  top: 32px;
   flex-grow: 1;
   margin: 16px;
   // height: auto;
@@ -19,6 +20,7 @@
 }
 
 #map-container {
+  position: relative;
   background: $black;
-  height: 100%;
+  height: auto;
 }
