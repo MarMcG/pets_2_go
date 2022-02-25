@@ -1,8 +1,8 @@
 <% @pets.each do |pet|%>
   <%= link_to pet_path(pet), class: "card-v" do %>
+    <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
     <%= cl_image_tag pet.photo.key%>
     <div class="card-info">
-      <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
       <h4 class="card-title"><%= pet.title %></h4>
       <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
     </div>
