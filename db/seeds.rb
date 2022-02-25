@@ -1,8 +1,8 @@
 
 
+Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 users = []
   users << User.create!(
