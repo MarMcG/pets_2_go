@@ -14,7 +14,7 @@
   <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
     My Bookings
   </button>
-  <div class="btn btn-warning"><%=link_to "Delete Pet Listing", pet_path(pet), method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %></div>
+  <div class="my-btn"><%=link_to "Delete Pet Listing", pet_path(pet), method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %></div>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
