@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    raise
     if @user.save
       redirect_to 'pages#home'
     end
