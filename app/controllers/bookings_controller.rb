@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     # raise
     if @booking.save
-      redirect_to my_pets_path
+      redirect_to profile_path
     else
       render 'bookings/new'
     end
