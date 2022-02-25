@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+
       redirect_to 'pages#home'
     end
   end
@@ -31,6 +32,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :img_url, :photo)
+    params.require(:user).permit(:email,:username,:photo)
   end
 end

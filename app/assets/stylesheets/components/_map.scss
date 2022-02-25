@@ -10,10 +10,15 @@
 #map {
   position: sticky;
   flex-grow: 1;
-  margin: 16px 0 16px 16px;
+  margin: 16px;
   // height: auto;
   // margin: 16px;
   // object-fit: cover;
   height: fit-content;
   border: $border_primary;
+}
+
+#map-container {
+  background: $black;
+  height: 100%;
 }
