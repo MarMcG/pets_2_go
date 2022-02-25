@@ -8,7 +8,7 @@ users = []
   martyn = User.new(
     email: "m@m.m",
     password: "qwerty",
-    username: 'BigM',
+    username: 'Mrty',
   )
     martyn.photo.attach(io: File.open('app/assets/images/martyn.jpg'), filename: 'martyn.jpg')
     martyn.save
@@ -17,7 +17,7 @@ users = []
   georges = User.new(
     email: "g@g.g",
     password: "qwerty",
-    username: 'BigG',
+    username: 'GeoC',
   )
     georges.photo.attach(io: File.open('app/assets/images/georges.jpg'), filename: 'georges.jpg')
     georges.save
@@ -26,7 +26,7 @@ users = []
   sedrak = User.new(
     email: "s@s.s",
     password: "qwerty",
-    username: 'BigS',
+    username: 'TheRussian',
   )
     sedrak.photo.attach(io: File.open('app/assets/images/sedrak.png'), filename: 'Sedrak.png')
     sedrak.save
@@ -35,7 +35,7 @@ users = []
   raph = User.new(
     email: "r@r.r",
     password: "qwerty",
-    username: 'BigR',
+    username: 'Raph',
   )
   raph.photo.attach(io: File.open('app/assets/images/raph.png'), filename: 'raph.png')
     raph.save
@@ -89,7 +89,7 @@ pets = []
     pet_type: "Hamster",
     name: "bRody",
     description: "Likes to be handled",
-    age: 1,
+    age: 2,
     rate: 15,
     title: "Pets-2-Go",
     address: "Decarie Boulevard, Montreal",
