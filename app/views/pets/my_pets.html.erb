@@ -26,29 +26,54 @@
       </div>
     </div>
 
+<<<<<<< HEAD
   </div>
+=======
+  <% end %>
+  <%# <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    My Bookings
+  </button> %>
+    <%pet.bookings.each do |book| %>
+      <h2><%= book.user.username %></h2>
+      <h2><%= book.start_date %></h2>
+      <h2><%= book.end_date %></h2>
+      <h2><%= book.status %></h2>
+      <% if book.status == "pending" %>
+        <%= link_to "Approve", booking_confirm_path(booking), method: :patch, remote: true %>
+        <%= link_to "Deny", booking_reject_path(booking), method: :patch, remote: true %>
+      <% end %>
+    <% end %>
+>>>>>>> 2b1c4c6426e758b89ce0e6bffcf29fa7dd7616df
 
-            <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
+  <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
 
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<% end %>
+  <%# <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">My Bookings</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Requests to book</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+<<<<<<< HEAD
         <div class="modal-body">
           <% @bookings = booking[1] %>
           <%= render 'shared/booking', bookings: @bookings %>
 
         </div>
         <div class="modal-footer">
+=======
+        <div class="modal-body"> %>
+
+          <%# booking[1].each do |book| %>
+            <%# <h2>= link_to "delete booking", booking_path(book.id), method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"}, class: 'text-danger' %>
+          <%# end %>
+        <%# </div> %>
+        <%# <div class="modal-footer">
+>>>>>>> 2b1c4c6426e758b89ce0e6bffcf29fa7dd7616df
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
-</div>
+        </div> %>
+      <%# </div> %>
+    <%# </div> %>
+  <%# </div> %>
