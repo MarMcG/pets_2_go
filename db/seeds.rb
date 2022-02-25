@@ -10,7 +10,7 @@ users = []
     password: "qwerty",
     username: 'BigM',
   )
-  martyn.photo.attach(io: File.open('app/assets/images/martyn.jpg'), filename: 'martyn.jpg')
+    martyn.photo.attach(io: File.open('app/assets/images/martyn.jpg'), filename: 'martyn.jpg')
     martyn.save
     users << martyn
 
@@ -19,7 +19,7 @@ users = []
     password: "qwerty",
     username: 'BigG',
   )
-  georges.photo.attach(io: File.open('app/assets/images/georges.jpg'), filename: 'georges.jpg')
+    georges.photo.attach(io: File.open('app/assets/images/georges.jpg'), filename: 'georges.jpg')
     georges.save
     users << georges
 
@@ -28,7 +28,7 @@ users = []
     password: "qwerty",
     username: 'BigS',
   )
-  sedrak.photo.attach(io: File.open('app/assets/images/sedrak.png'), filename: 'Sedrak.png')
+    sedrak.photo.attach(io: File.open('app/assets/images/sedrak.png'), filename: 'Sedrak.png')
     sedrak.save
     users << sedrak
 
@@ -224,55 +224,5 @@ pets = []
     pet13.save
     pets << pet13
 
-    puts pets[0].id
-  # Booking.create!(
-  #   user_id: users[0].id,
-  #   pet_id: pets[8].id,
-  #   start_date:  Date.new(2022, 2, 26),
-  #   end_date: Date.new(2023, 5, 30),
-  # )
-  # Booking.create!(
-  #   user_id: users[1].id,
-  #   pet_id: pets[7].id,
-  #   start_date:  Date.new(2022, 2, 28),
-  #   end_date: Date.new(2023, 4, 30),
-  # )
-  # Booking.create!(
-  #   user_id: users[2].id,
-  #   pet_id: pets[6].id,
-  #   start_date:  Date.new(2022, 3, 7),
-  #   end_date: Date.new(2023, 3, 14),
-  # )
-  # Booking.create!(
-  #   user_id: users[3].id,
-  #   pet_id: pets[5].id,
-  #   start_date:  Date.new(2022, 3, 14),
-  #   end_date: Date.new(2023, 3, 30),
-  # )
-  # Booking.create!(
-  #   user_id: users[0].id,
-  #   pet_id: pets[4].id,
-  #   start_date:  Date.new(2022, 3, 20),
-  #   end_date: Date.new(2023, 3, 30),
-  # )
-  # Booking.create!(
-  #   user_id: users[1].id,
-  #   pet_id: pets[9].id,
-  #   start_date: Date.new(2022, 3, 1),
-  #   end_date: Date.new(2023, 7, 30),
-  # )
 
-
-
-
-    # 5.times do
-    #   booking = Booking.create(
-    #     user_id: users.sample.id,
-    #     pet_id: pets_array[rand(pets_array.length - 1)].id,
-    #     start_date: Date.new(2022, 1, 1),
-    #     end_date: Date.new(2023, 7, 30)
-    #   )
-
-    #   puts booking.valid?
-    #   puts booking.errors.messages
-    # end
+puts "all done"

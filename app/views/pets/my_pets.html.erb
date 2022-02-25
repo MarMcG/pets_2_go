@@ -1,0 +1,39 @@
+
+<% @bookings.each do |booking|%>
+  <% pet = booking[0] %>
+  <%= link_to pet_path(pet), class: "carde" do %>
+    <%= cl_image_tag pet.photo.key%>
+    <div class="card-info">
+      <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
+      <h4 class="card-title"><%= pet.title %></h4>
+      <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
+      <div class="card-desc"><i>''<%= pet.description %>''</i></div>
+      <div class="card-rate"><span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day</div>
+    </div>
+  <% end %>
+  <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    My Bookings
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">My Bookings</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <% booking[1].each do |book| %>
+            <h2><%= book.user.username %></h2>
+            <h2><%= book.start_date %></h2>
+            <h2><%= book.end_date %></h2>
+            <h2><%= link_to "delete booking", booking_path(book.id), method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"}, class: 'text-danger' %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

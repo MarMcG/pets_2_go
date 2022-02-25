@@ -1,0 +1,24 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+#map {
+  position: sticky;
+  flex-grow: 1;
+  margin: 16px;
+  // height: auto;
+  // margin: 16px;
+  // object-fit: cover;
+  height: fit-content;
+  border: $border_primary;
+}
+
+#map-container {
+  background: $black;
+  height: 100%;
+}

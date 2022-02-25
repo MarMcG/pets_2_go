@@ -1,24 +1,38 @@
-<%= link_to "back to index", pets_path %>
-<%= link_to "edit pet", edit_pet_path %>
 
-<div class="container show-box">
-  <%= cl_image_tag @pet.photo.key%>
-  <div class="p-2 bd-highlight">
-    <div class="card-info">
-      <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
-      <h4 class="card-title"><%= @pet.title %></h4>
-      <div class="card-type">
-        - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
-      </div>
-      <div class="card-desc">
-        <i>''<%= @pet.description %>''</i>
-      </div>
-      <div class="card-rate">
-        <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+<%= link_to "back", pets_path, class: "btn btn-back" %>
+
+<div class="container d-flex">
+  <div class="show-box">
+    <%= cl_image_tag @pet.photo.key%>
+    <div class="p-2 bd-highlight">
+      <div class="card-info">
+        <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
+        <h4 class="card-title"><%= @pet.title %></h4>
+        <div class="card-type">
+          - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
+        </div>
+        <div class="card-desc">
+          <i>''<%= @pet.description %>''</i>
+        </div>
+        <div class="card-rate">
+          <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <% unless @pet.user == current_user %>
+  <div class="book-box">
+    <div class="container">
 
-<%= link_to "Book Pet", new_pet_booking_path(@pet)%>
-<%= link_to "Edit Pet", edit_pet_path %>
+      <%= simple_form_for([@pet, @booking]) do |f| %>
+      <h1 class="text-center">New booking</h1>
+        <h5 class="form-title" >From: </h5>
+        <%= f.input :start_date, class: "input_field" %>
+        <h5 class="form-title">To:  </h5>
+        <%= f.input :end_date, class: "input_field" %>
+        <%= f.submit 'BOOK PET' %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>

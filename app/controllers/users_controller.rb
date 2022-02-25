@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-  # def index
-
-  # end
+  def index
+    user_pets
+  end
 
   def new
     @user = User.new
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    raise
     if @user.save
       redirect_to 'pages#home'
     end
@@ -31,6 +32,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :img_url)
+    params.require(:user).permit(:email,:username,:photo)
   end
 end
