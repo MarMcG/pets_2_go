@@ -52,7 +52,7 @@ pets = []
     title: "Pets-2-Go",
     address: "Oxford Avenue, Montreal",
     )
-    pet1.photo.attach(io: File.open('app/assets/images/2.jpg'), filename: 'Jazz.jpg')
+    pet1.photo.attach(io: File.open('app/assets/images/jazz.jpg'), filename: 'Jazz.jpg')
     pet1.save
     pets << pet1
 
@@ -64,7 +64,7 @@ pets = []
     age: 2,
     rate: 40,
     title: "Pets-2-Go",
-    address: "Oxford Avenue, Montreal",
+    address: "Harvard Avenue, Montreal",
     )
     pet2.photo.attach(io: File.open('app/assets/images/1.jpg'), filename: 'Eyeball.jpg')
     pet2.save
@@ -78,7 +78,7 @@ pets = []
     age: 7,
     rate: 160,
     title: "Pets-2-Go",
-    address: "Oxford Avenue, Montreal",
+    address: "Marcil Avenue, Montreal",
     )
     pet3.photo.attach(io: File.open('app/assets/images/Tiger.jpg'), filename: 'Snarl.jpg')
     pet3.save
@@ -92,7 +92,7 @@ pets = []
     age: 1,
     rate: 15,
     title: "Pets-2-Go",
-    address: "Montreal",
+    address: "Decarie Boulevard, Montreal",
     )
     pet4.photo.attach(io: File.open('app/assets/images/hamster.jpg'), filename: 'bRody.jpg')
     pet4.save
@@ -106,7 +106,7 @@ pets = []
     age: 4,
     rate: 30,
     title: "Pets-2-Go",
-    address: "Laval",
+    address: "Boulevard Saint-Martin, Laval",
     )
     pet5.photo.attach(io: File.open('app/assets/images/Cat.jpg'), filename: 'Archie.jpg')
     pet5.save
@@ -115,14 +115,14 @@ pets = []
   pet6 = Pet.new(
     user_id: users[2].id,
     pet_type: "Crocodile",
-    name: "Dundee",
+    name: "Gena",
     description: "Likes to roll around",
-    age: 1,
+    age: 19,
     rate: 200,
     title: "Pets-2-Go",
-    address: "Laval",
+    address: "rue dale, Laval",
     )
-    pet6.photo.attach(io: File.open('app/assets/images/tinycroc.jpg'), filename: 'Dunde7.jpg')
+    pet6.photo.attach(io: File.open('app/assets/images/Gena.jpg'), filename: 'Gena.jpg')
     pet6.save
     pets << pet6
 
@@ -134,7 +134,7 @@ pets = []
     age: 2,
     rate: 24,
     title: "Pets-2-Go",
-    address: "Montreal",
+    address: "Park Avenue,Montreal",
     )
     pet7.photo.attach(io: File.open('app/assets/images/Lamb.jpg'), filename: 'HoP.jpg')
     pet7.save
@@ -143,14 +143,14 @@ pets = []
   pet8 = Pet.new(
     user_id: users[2].id,
     pet_type: "rabbit",
-    name: "Thumper",
+    name: "Boris",
     description: "Energetic",
-    age: 4,
-    rate: 27,
+    age: 3,
+    rate: 400,
     title: "Pets-2-Go",
-    address: "Montreal",
+    address: "rue Dale, Laval",
     )
-    pet8.photo.attach(io: File.open('app/assets/images/rabbit.jpg'), filename: 'Thumper.jpg')
+    pet8.photo.attach(io: File.open('app/assets/images/boris.jpg'), filename: 'boris.jpg')
     pet8.save
     pets << pet8
 
@@ -162,7 +162,7 @@ pets = []
     age: 3,
     rate: 22,
     title: "Pets-2-Go",
-    address: "Montreal",
+    address: "Guelph Avenue, Montreal",
     )
     pet9.photo.attach(io: File.open('app/assets/images/ferret.jpg'), filename: 'Fred.jpg')
     pet9.save
@@ -176,7 +176,7 @@ pets = []
     age: 469,
     rate: 350,
     title: "Pets-2-Go",
-    address: "Laval",
+    address: "Cavendish boulevard, Montreal",
     )
     pet10.photo.attach(io: File.open('app/assets/images/dragon.jpg'), filename: 'Peter.jpg')
     pet10.save
@@ -190,7 +190,7 @@ pets = []
     age: 5,
     rate: 48,
     title: "Pets-2-Go",
-    address: "Laval",
+    address: "Boulevard Thimens, Montreal",
     )
     pet11.photo.attach(io: File.open('app/assets/images/3.jpg'), filename: 'Spot.jpg')
     pet11.save
@@ -204,7 +204,7 @@ pets = []
     age: 3,
     rate: 64,
     title: "Pets-2-Go",
-    address: "Laval",
+    address: "Rue Bertrand, Montreal",
     )
     pet12.photo.attach(io: File.open('app/assets/images/chimp.jpg'), filename: 'Chocolate.jpg')
     pet12.save
@@ -218,7 +218,7 @@ pets = []
     age: 4,
     rate: 128,
     title: "Pets-2-Go",
-    address: "Ottawa",
+    address: "Casgrain Avenue, Montreal",
     )
     pet13.photo.attach(io: File.open('app/assets/images/pet_lion.jpg'), filename: 'Jeffrey.jpg')
     pet13.save
