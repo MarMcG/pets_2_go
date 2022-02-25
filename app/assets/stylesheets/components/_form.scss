@@ -1,12 +1,32 @@
+// .form-center {
+//   border-radius: $border-radius;
+//   background-color: $white;
+//   color: $orange;
+//   width: fit-content;
+//   margin: 0 auto;
+//   box-shadow: $shadow;
+// }
+
 .form-center {
   border-radius: $border-radius;
-  background-color: $white;
+  background: $white;
+  padding: 0 32px 32px 32px;
   color: $orange;
-  width: fit-content;
   margin: 0 auto;
+  width: 500px;
   box-shadow: $shadow;
-}
 
+  h1 {
+    background-color: $black;
+    color: $white;
+    padding: 24px 16px 8px 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    span {
+      color: $orange;
+      font-size: 1.2em;
+    }
+  }
+}
 .new_booking {
   border-radius: $border-radius;
   background: $white;
@@ -46,6 +66,7 @@
   padding: 0 32px 32px 32px;
   color: $orange;
   margin: 0 auto;
+  width: 500px;
   box-shadow: $shadow;
 
   h1 {
