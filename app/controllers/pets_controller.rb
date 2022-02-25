@@ -23,7 +23,7 @@ class PetsController < ApplicationController
 
   def destroy
     @pet.destroy
-    redirect_to pets_path, notice: "Pet was succefully deleted"
+    redirect_to my_pets_path, alert: "Pet was succefully deleted"
   end
 
   def index
@@ -34,11 +34,6 @@ class PetsController < ApplicationController
   def show
     @booking = Booking.new
     @booking.pet = @pet
-  end
-
-  def destroy
-    @pet.destroy
-    redirect_to pets_path, notice: "Pet was succefully deleted"
   end
 
   def update
