@@ -1,7 +1,5 @@
 .form-center {
-  display: flex;
   border-radius: $border-radius;
-  justify-content: center;
   background-color: $white;
   color: $orange;
   width: fit-content;
@@ -12,7 +10,7 @@
 .new_booking {
   border-radius: $border-radius;
   background: $white;
-  padding: 0 32px 32px 32px;
+  padding: 0 16px 16px 16px;
   color: $orange;
   margin: 0 auto;
   box-shadow: $shadow;
