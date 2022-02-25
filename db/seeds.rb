@@ -1,40 +1,278 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
+
+Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
-Booking.destroy_all
-# users = []
-# 5.times do
-#   users << User.create!(
-#     email: Faker::Internet.unique.email,
-#     password: Faker::Alphanumeric.alphanumeric(number: 10),
-#     username: Faker::Name.name
-#   )
-# end
 
-# users.each do |user|
-#   puts "#{user.id}"
+users = []
+  martyn = User.new(
+    email: "m@m.m",
+    password: "qwerty",
+    username: 'BigM',
+  )
+  martyn.photo.attach(io: File.open('app/assets/images/martyn.jpg'), filename: 'martyn.jpg')
+    martyn.save
+    users << martyn
 
-#   5.times do
-#     pet = Pet.create!(
-#       name: Faker::GreekPhilosophers.name,
-#       user: user,
-#       pet_type: Faker::Creature::Animal.name,
-#       description: Faker::ChuckNorris.fact,
-#       age: rand(1...100),
-#       rate: rand(1...100),
-#       img_url: 'https://picsum.photos/seed/picsum/200/300',
-#       title: Faker::GreekPhilosophers.name,
-#       location: Faker::Address.full_address
-#     )
-#     puts "#{pet.id}"
-#   end
-# end
+  georges = User.new(
+    email: "g@g.g",
+    password: "qwerty",
+    username: 'BigG',
+  )
+  georges.photo.attach(io: File.open('app/assets/images/georges.jpg'), filename: 'georges.jpg')
+    georges.save
+    users << georges
 
-# puts "all done"
+  sedrak = User.new(
+    email: "s@s.s",
+    password: "qwerty",
+    username: 'BigS',
+  )
+  sedrak.photo.attach(io: File.open('app/assets/images/sedrak.png'), filename: 'Sedrak.png')
+    sedrak.save
+    users << sedrak
+
+  raph = User.new(
+    email: "r@r.r",
+    password: "qwerty",
+    username: 'BigR',
+  )
+  raph.photo.attach(io: File.open('app/assets/images/raph.png'), filename: 'raph.png')
+    raph.save
+    users << raph
+
+pets = []
+  pet1 = Pet.new(
+    user_id: users[0].id,
+    pet_type: "Dog",
+    name: "Jazz",
+    description: "Playful",
+    age: 3,
+    rate: 50,
+    title: "Pets-2-Go",
+    address: "Oxford Avenue, Montreal",
+    )
+    pet1.photo.attach(io: File.open('app/assets/images/2.jpg'), filename: 'Jazz.jpg')
+    pet1.save
+    pets << pet1
+
+  pet2 = Pet.new(
+    user_id: users[0].id,
+    pet_type: "Dog",
+    name: "Eyeball",
+    description: "Clumsy",
+    age: 2,
+    rate: 40,
+    title: "Pets-2-Go",
+    address: "Oxford Avenue, Montreal",
+    )
+    pet2.photo.attach(io: File.open('app/assets/images/1.jpg'), filename: 'Eyeball.jpg')
+    pet2.save
+    pets << pet2
+
+  pet3 = Pet.new(
+    user_id: users[1].id,
+    pet_type: "Tiger",
+    name: "Snarl",
+    description: "Sharp Wit, Sharper nails",
+    age: 7,
+    rate: 160,
+    title: "Pets-2-Go",
+    address: "Oxford Avenue, Montreal",
+    )
+    pet3.photo.attach(io: File.open('app/assets/images/Tiger.jpg'), filename: 'Snarl.jpg')
+    pet3.save
+    pets << pet3
+
+  pet4 = Pet.new(
+    user_id: users[1].id,
+    pet_type: "Hamster",
+    name: "bRody",
+    description: "Likes to be handled",
+    age: 1,
+    rate: 15,
+    title: "Pets-2-Go",
+    address: "Montreal",
+    )
+    pet4.photo.attach(io: File.open('app/assets/images/hamster.jpg'), filename: 'bRody.jpg')
+    pet4.save
+    pets << pet4
+
+  pet5 = Pet.new(
+    user_id: users[1].id,
+    pet_type: "Cat",
+    name: "Archie",
+    description: "Loner",
+    age: 4,
+    rate: 30,
+    title: "Pets-2-Go",
+    address: "Laval",
+    )
+    pet5.photo.attach(io: File.open('app/assets/images/Cat.jpg'), filename: 'Archie.jpg')
+    pet5.save
+    pets << pet5
+
+  pet6 = Pet.new(
+    user_id: users[2].id,
+    pet_type: "Crocodile",
+    name: "Dundee",
+    description: "Likes to roll around",
+    age: 1,
+    rate: 200,
+    title: "Pets-2-Go",
+    address: "Laval",
+    )
+    pet6.photo.attach(io: File.open('app/assets/images/tinycroc.jpg'), filename: 'Dunde7.jpg')
+    pet6.save
+    pets << pet6
+
+  pet7 = Pet.new(
+    user_id: users[2].id,
+    pet_type: "Sheep",
+    name: "HoP",
+    description: "Likes to jump around",
+    age: 2,
+    rate: 24,
+    title: "Pets-2-Go",
+    address: "Montreal",
+    )
+    pet7.photo.attach(io: File.open('app/assets/images/Lamb.jpg'), filename: 'HoP.jpg')
+    pet7.save
+    pets << pet7
+
+  pet8 = Pet.new(
+    user_id: users[2].id,
+    pet_type: "rabbit",
+    name: "Thumper",
+    description: "Energetic",
+    age: 4,
+    rate: 27,
+    title: "Pets-2-Go",
+    address: "Montreal",
+    )
+    pet8.photo.attach(io: File.open('app/assets/images/rabbit.jpg'), filename: 'Thumper.jpg')
+    pet8.save
+    pets << pet8
+
+  pet9 = Pet.new(
+    user_id: users[3].id,
+    pet_type: "ferret",
+    name: "Fred",
+    description: "Squirmy",
+    age: 3,
+    rate: 22,
+    title: "Pets-2-Go",
+    address: "Montreal",
+    )
+    pet9.photo.attach(io: File.open('app/assets/images/ferret.jpg'), filename: 'Fred.jpg')
+    pet9.save
+    pets << pet9
+
+  pet10 = Pet.new(
+    user_id: users[3].id,
+    pet_type: "Dragon",
+    name: "Peter",
+    description: "Big. Green. Fiery attitude",
+    age: 469,
+    rate: 350,
+    title: "Pets-2-Go",
+    address: "Laval",
+    )
+    pet10.photo.attach(io: File.open('app/assets/images/dragon.jpg'), filename: 'Peter.jpg')
+    pet10.save
+    pets << pet10
+
+  pet11 = Pet.new(
+    user_id: users[3].id,
+    pet_type: "Dog",
+    name: "Spot",
+    description: "Likes to play hide and seek",
+    age: 5,
+    rate: 48,
+    title: "Pets-2-Go",
+    address: "Laval",
+    )
+    pet11.photo.attach(io: File.open('app/assets/images/3.jpg'), filename: 'Spot.jpg')
+    pet11.save
+    pets << pet11
+
+  pet12 = Pet.new(
+    user_id: users[0].id,
+    pet_type: "Chimpanzee",
+    name: "Chocolate",
+    description: "Swings into action",
+    age: 3,
+    rate: 64,
+    title: "Pets-2-Go",
+    address: "Laval",
+    )
+    pet12.photo.attach(io: File.open('app/assets/images/chimp.jpg'), filename: 'Chocolate.jpg')
+    pet12.save
+    pets << pet12
+
+  pet13 = Pet.new(
+    user_id: users[1].id,
+    pet_type: "Lion",
+    name: "Jeffrey",
+    description: "Lazy and Loveable",
+    age: 4,
+    rate: 128,
+    title: "Pets-2-Go",
+    address: "Ottawa",
+    )
+    pet13.photo.attach(io: File.open('app/assets/images/pet_lion.jpg'), filename: 'Jeffrey.jpg')
+    pet13.save
+    pets << pet13
+
+    puts pets[0].id
+  # Booking.create!(
+  #   user_id: users[0].id,
+  #   pet_id: pets[8].id,
+  #   start_date:  Date.new(2022, 2, 26),
+  #   end_date: Date.new(2023, 5, 30),
+  # )
+  # Booking.create!(
+  #   user_id: users[1].id,
+  #   pet_id: pets[7].id,
+  #   start_date:  Date.new(2022, 2, 28),
+  #   end_date: Date.new(2023, 4, 30),
+  # )
+  # Booking.create!(
+  #   user_id: users[2].id,
+  #   pet_id: pets[6].id,
+  #   start_date:  Date.new(2022, 3, 7),
+  #   end_date: Date.new(2023, 3, 14),
+  # )
+  # Booking.create!(
+  #   user_id: users[3].id,
+  #   pet_id: pets[5].id,
+  #   start_date:  Date.new(2022, 3, 14),
+  #   end_date: Date.new(2023, 3, 30),
+  # )
+  # Booking.create!(
+  #   user_id: users[0].id,
+  #   pet_id: pets[4].id,
+  #   start_date:  Date.new(2022, 3, 20),
+  #   end_date: Date.new(2023, 3, 30),
+  # )
+  # Booking.create!(
+  #   user_id: users[1].id,
+  #   pet_id: pets[9].id,
+  #   start_date: Date.new(2022, 3, 1),
+  #   end_date: Date.new(2023, 7, 30),
+  # )
+
+
+
+
+    # 5.times do
+    #   booking = Booking.create(
+    #     user_id: users.sample.id,
+    #     pet_id: pets_array[rand(pets_array.length - 1)].id,
+    #     start_date: Date.new(2022, 1, 1),
+    #     end_date: Date.new(2023, 7, 30)
+    #   )
+
+    #   puts booking.valid?
+    #   puts booking.errors.messages
+    # end
