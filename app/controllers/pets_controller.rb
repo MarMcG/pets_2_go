@@ -29,6 +29,17 @@ class PetsController < ApplicationController
   def index
     @pets = Pet.all
     markers
+    if params[:query].present?
+      sql_query = " \
+        pets.pet_type @@ :query \
+        OR pets.name @@ :query \
+        OR pets.address @@ :query \
+        OR users.username @@ :query \
+      "
+      @pets = Pet.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @pets = Pet.all
+    end
   end
 
   def show
