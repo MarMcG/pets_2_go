@@ -26,26 +26,44 @@
       </div>
     </div>
 
-<<<<<<< HEAD
   </div>
-=======
-  <% end %>
+    <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
+
   <%# <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
     My Bookings
   </button> %>
-    <%pet.bookings.each do |book| %>
-      <h2><%= book.user.username %></h2>
-      <h2><%= book.start_date %></h2>
-      <h2><%= book.end_date %></h2>
-      <h2><%= book.status %></h2>
-      <% if book.status == "pending" %>
-        <%= link_to "Approve", booking_confirm_path(booking), method: :patch, remote: true %>
-        <%= link_to "Deny", booking_reject_path(booking), method: :patch, remote: true %>
-      <% end %>
-    <% end %>
->>>>>>> 2b1c4c6426e758b89ce0e6bffcf29fa7dd7616df
+    <% pet.bookings.each do |booking|%>
+    <% pet = booking.pet %>
+    <div class="booking">
+      <%= cl_image_tag booking.user.photo.key%>
+      <div class="card-info">
+        <%= link_to pet_path(pet) do %>
+          <h4 class="card-name"><%= booking.user.username %></span>!</h4>
+        <% end %>
+        <div class="card-rate d-flex justify-content-between gap-3 mt-3 align-items-start">
+          <div>
+            <div class="d-flex mx-3">
+              <h5>Time:</h5>
+              <p class="m-0 mx-2"><%= booking.start_date %></p>
+              <p>-</p>
+              <p class="m-0 mx-2"><%= booking.end_date %></p>
+            </div>
+            <span class="rounded-pill ms-3"><%= (booking.end_date - booking.start_date).to_i * pet.rate %><%= fa_icon "solid dollar"%></span>
+          </div>
+          <div class="d-flex">
+            <h2 class="mx-3"><%= booking.status %></h2>
+            <% if booking.status == "pending" %>
+              <div class="d-flex flex-column mx-3 bg-black py-2 px-3 rounded">
+                <%= link_to "Approve", booking_confirm_path(booking), method: :patch, remote: true %>
+                <%= link_to "Deny", booking_reject_path(booking), method: :patch, remote: true %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-  <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
 
 <% end %>
   <%# <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,14 +73,8 @@
           <h5 class="modal-title" id="exampleModalLabel">Requests to book</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-<<<<<<< HEAD
-        <div class="modal-body">
-          <% @bookings = booking[1] %>
-          <%= render 'shared/booking', bookings: @bookings %>
 
-        </div>
-        <div class="modal-footer">
-=======
+
         <div class="modal-body"> %>
 
           <%# booking[1].each do |book| %>
@@ -70,7 +82,7 @@
           <%# end %>
         <%# </div> %>
         <%# <div class="modal-footer">
->>>>>>> 2b1c4c6426e758b89ce0e6bffcf29fa7dd7616df
+
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div> %>
