@@ -71,8 +71,21 @@
   text-decoration: none;
   padding: 10px 14px;
   margin: 16px 0;
-  background: $black;
+  background: $dark-gray;
   color: $white;
+  border: none;
+  font-weight: bold;
+  border-radius: $border-radius-lg 0 $border-radius-lg 0;
+  box-shadow: $shadow;
+}
+
+.my-warning {
+  width: fit-content;
+  display: block;
+  text-decoration: none;
+  padding: 6px 14px;
+  background: $gray;
+  color: $dark-gray;
   border: none;
   font-weight: bold;
   border-radius: $border-radius-lg 0 $border-radius-lg 0;

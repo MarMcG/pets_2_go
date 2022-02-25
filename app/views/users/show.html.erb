@@ -1,18 +1,20 @@
-<h1 class="text-center">Welcome to your profile page</h1>
+<h1 class="text-center mt-3">Welcome to your profile page</h1>
 
 <div class="container">
   <div class="profile">
-    <% unless current_user.photo.key.nil? %>
-      <%= cl_image_tag current_user.photo.key, class: "avatar-large"%>
-    <% end %>
-    <div class="profile-infos">
-      <h2>Profile name</h2>
-      <h3><%= @username %></h3>
-      <p>Small description with <strong>relevant info</strong> only.</p>
+    <div class="bg-black pe-3">
+      <% unless current_user.photo.key.nil? %>
+        <%= cl_image_tag current_user.photo.key, class: "avatar-large"%>
+      <% end %>
+    </div>
+
+    <div class="profile-infos mx-3 px-3">
+      <h2>Username: <%= current_user.username %></h2>
+      <h3>Email: <%= current_user.email %></h3>
     </div>
   </div>
 
   <div class="bookings">
-    <%= render 'shared/card', pets: @pets %>
+    <%= render 'shared/booking', bookings: @bookings %>
   </div>
 </div>
