@@ -6,8 +6,13 @@
       <h4 class="card-title"><%= pet.title %></h4>
       <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
       <div class="card-desc"><i>''<%= pet.description %>''</i></div>
+
+      <div class="card-rate d-flex justify-content-between">
       <p><%= pet.address %></p>
-      <div class="card-rate"><span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day</div>
+      <div>
+        <span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day
+      </div>
+      </div>
     </div>
   <% end %>
 <% end %>
