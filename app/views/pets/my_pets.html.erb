@@ -9,9 +9,10 @@
       <h4 class="card-title"><%= pet.title %></h4>
       <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
       <div class="card-desc"><i>''<%= pet.description %>''</i></div>
+
       <div class="d-flex justify-content-between">
         <div class="card-rate ">
-          <span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day
+          <span class="rounded-pill"><%= fa_icon "solid dollar"%><%= pet.rate %></span>/day
         </div>
         <div class="d-flex">
 
@@ -21,12 +22,12 @@
         </div>
 
       </div>
-
-
     </div>
 
   <% end %>
+
             <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
+
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
