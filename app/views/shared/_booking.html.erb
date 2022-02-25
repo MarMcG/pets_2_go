@@ -1,0 +1,29 @@
+<% @bookings.each do |booking|%>
+  <% pet = booking.pet %>
+  <div class="booking">
+    <%= cl_image_tag pet.photo.key%>
+    <div class="card-info">
+      <%= link_to pet_path(pet) do %>
+        <h3 class="card-name">My name is <span><%= pet.name%></span>!</h3>
+      <% end %>
+      <div class="card-title d-flex align-items-center">
+        <h4 class="m-1"><%= pet.title %></h4>
+        <div class="card-type m-1">
+          - I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old
+        </div>
+      </div>
+      <div class="card-rate d-flex justify-content-between">
+      <p><%= pet.address %></p>
+      <div class="d-flex align-items-center m-0">
+        <div class="d-flex align-items-center">
+          <%= link_to "DELETE", booking_path(booking), method: "delete", class: "my-warning" %>
+          <p class="m-0 mx-2"><%= booking.start_date %></p>
+          <p class="m-0">-</p>
+          <p class="m-0 mx-2"><%= booking.end_date %></p>
+        </div>
+        <span class="rounded-pill"><%= (booking.end_date - booking.start_date).to_i * pet.rate %><%= fa_icon "solid dollar"%></span>
+      </div>
+      </div>
+    </div>
+  </div>
+<% end %>

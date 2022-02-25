@@ -1,16 +1,12 @@
-
 .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   background: $white;
   box-shadow: $shadow;
   text-align: center;
-  img{
-    padding: 20px;
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
-    margin: 0 auto;
-  }
+  margin-bottom: 16px;
 }
 
 // .profile{

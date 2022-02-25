@@ -17,14 +17,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @username = current_user.email
-    user_pets
+    user_bookings
   end
 
   private
 
   def user_bookings
-    @user_bookings = Booking.where(user_id: current_user.id)
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def user_pets

@@ -11,6 +11,7 @@
   color: $black;
   height: 256px;
   margin-bottom: 16px;
+  box-shadow: $shadow;
   img {
     flex-grow: 1;
     height: 100%;
@@ -21,6 +22,32 @@
   }
 }
 
+.booking {
+  text-decoration: none;
+  background-color: $white;
+  display: flex;
+  color: $black;
+  height: 180px;
+  margin-bottom: 16px;
+  box-shadow: $shadow;
+  img {
+    flex-grow: 1;
+    height: 100%;
+    object-fit: cover;
+    max-width: 180px !important;
+    min-width: 180px !important;
+    padding: 8px 0px 8px 8px;
+  }
+  .card-rate {
+    margin: 0;
+  }
+  .card-info {
+    padding: 8px;
+  }
+  * {
+    text-decoration: none;
+  }
+}
 .card-name {
   margin: 0;
 }
