@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="profile">
-    <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+  <%= cl_image_tag current_user.photo.key, class: "avatar-large"%>
     <div class="profile-infos">
       <h2>Profile name</h2>
       <h3><%= @username %></h3>
