@@ -9,6 +9,7 @@
       <div class="card-type">- I'm a <strong><%= pet.pet_type %></strong>, and I'm <strong><%= pet.age %></strong> years old</div>
       <div class="card-desc"><i>''<%= pet.description %>''</i></div>
       <div class="card-rate"><span class="rounded-pill"><%= pet.rate %><%= fa_icon "solid dollar"%></span>/day</div>
+      <div class="btn btn-warning"><%=link_to "Delete Pet", pet_path(pet), method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %></div>
     </div>
   <% end %>
   <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
