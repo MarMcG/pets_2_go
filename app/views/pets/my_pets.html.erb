@@ -17,7 +17,9 @@
           <span class="rounded-pill"><%= fa_icon "solid dollar"%><%= pet.rate %></span>/day
         </div>
         <div class="d-flex">
-
+          <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Remove Pet
+          </button>
           <button type="button" class="my-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
           My Bookings
           </button>
@@ -26,6 +28,11 @@
       </div>
     </div>
 
+<<<<<<< HEAD
+  <% end %>
+          <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
+
+=======
   </div>
     <%=link_to "Remove Pet", pet_path(pet),class: "my-btn", method: :delete, data: { confirm: "Are you sure you want to remove #{pet.name}"} %>
 
@@ -63,6 +70,7 @@
       </div>
     </div>
   <% end %>
+>>>>>>> 5aecd06c8dd9540b2a9e12ff9dcc75db6fc4a6ab
 
 
 <% end %>
