@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-  # def index
-
-  # end
+  def index
+    user_pets
+  end
 
   def new
     @user = User.new
@@ -31,6 +31,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :img_url)
+    params.require(:user).permit(:email, :img_url, :photo)
   end
 end

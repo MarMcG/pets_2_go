@@ -17,18 +17,22 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     # raise
     if @booking.save
-      redirect_to user_bookings_path(current_user)
+      redirect_to my_pets_path
     else
       render 'bookings/new'
     end
   end
 
   def index
-    user_bookings
+    @bookings = Booking.all
   end
 
   def show; end
 
+  def destroy
+    @booking.destroy
+    redirect_to my_pets_path
+  end
 
   def user_bookings
     @user_bookings = Booking.where(user_id: current_user.id)
@@ -45,7 +49,6 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    raise
     @booking = Booking.find(params[:id])
   end
 

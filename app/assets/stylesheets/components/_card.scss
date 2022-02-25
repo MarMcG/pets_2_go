@@ -1,26 +1,17 @@
-.cardes{
-  min-width: 640px;
-  width: 640px;
+.cardes {
+  min-width: 40%;
+  width: 40%;
   margin: 16px;
 }
 
-#map{
-  flex-grow: 1;
-
-  // height: auto;
-  // margin: 16px;
-  // object-fit: cover;
-  border: 1px solid red;
-}
-
-.carde{
+.carde {
   text-decoration: none;
   background-color: $white;
   display: flex;
   color: $black;
   height: 256px;
   margin-bottom: 16px;
-  img{
+  img {
     flex-grow: 1;
     height: 100%;
     object-fit: cover;
@@ -30,34 +21,32 @@
   }
 }
 
-.card-name{
+.card-name {
   margin: 0;
 }
 
-.card-info{
+.card-info {
   flex-grow: 1;
   padding: 0 16px;
 }
-
 
 .card-name {
   background-color: $black;
   color: $white;
   padding: 24px 16px 8px 16px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  span{
+  span {
     color: $orange;
     font-size: 1.2em;
   }
 }
 
-.card-title{
+.card-title {
   padding: 8px 0 0 0;
   @include border-light;
-
 }
 
-.card-desc{
+.card-desc {
   // width: fit-content;
   overflow: hidden;
   display: -webkit-box;
@@ -75,8 +64,8 @@
   font-weight: bold;
   color: $dark-gray;
   margin-top: 14px;
-  span{
-    background:$orange;
+  span {
+    background: $orange;
     color: $white;
 
     padding: 6px 8px;
@@ -89,13 +78,12 @@
   background-color: $white;
   color: $black;
   margin-bottom: 16px;
-  img{
+  width: 320px;
+  box-shadow: $shadow;
+  img {
     object-fit: cover;
-    max-width: 256px !important;
-    min-width: 256px !important;
-    padding: 8px 8px 8px 8px;
-  }
-  type{
-    margin: 0;
+    width: 100%;
+    height: 240px;
+    padding: 8px;
   }
 }
