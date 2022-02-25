@@ -46,6 +46,18 @@ class BookingsController < ApplicationController
     end
   end
 
+  def confirm
+    @booking = Booking.find(params[:id])
+    @booking.update(status: "confirmed")
+    redirect_to my_pets_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.update(status: "rejected")
+    redirect_to my_pets_path
+  end
+
   private
 
   def set_booking
