@@ -3,23 +3,24 @@
 
 <div class="container d-flex">
   <div class="show-box">
-  <%= cl_image_tag @pet.photo.key%>
-  <div class="p-2 bd-highlight">
-    <div class="card-info">
-      <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
-      <h4 class="card-title"><%= @pet.title %></h4>
-      <div class="card-type">
-        - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
-      </div>
-      <div class="card-desc">
-        <i>''<%= @pet.description %>''</i>
-      </div>
-      <div class="card-rate">
-        <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+    <%= cl_image_tag @pet.photo.key%>
+    <div class="p-2 bd-highlight">
+      <div class="card-info">
+        <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
+        <h4 class="card-title"><%= @pet.title %></h4>
+        <div class="card-type">
+          - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
+        </div>
+        <div class="card-desc">
+          <i>''<%= @pet.description %>''</i>
+        </div>
+        <div class="card-rate">
+          <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <% unless @pet.user == current_user %>
   <div class="book-box">
     <div class="container">
 
@@ -33,4 +34,5 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 </div>
