@@ -1,38 +1,47 @@
 
-<%= link_to "back", pets_path, class: "btn btn-back" %>
 
-<div class="container d-flex">
-  <div class="show-box">
-    <%= cl_image_tag @pet.photo.key%>
-    <div class="p-2 bd-highlight">
-      <div class="card-info">
-        <h3 class="card-name">My name is <span><%= @pet.name%></span>!</h3>
-        <h4 class="card-title"><%= @pet.title %></h4>
-        <div class="card-type">
-          - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
-        </div>
-        <div class="card-desc">
-          <i>''<%= @pet.description %>''</i>
-        </div>
-        <div class="card-rate">
-          <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+
+<div class="container">
+  <%= link_to "BACK", pets_path, class: "my-btn" %>
+  <div class="d-flex">
+    <div class="show-box">
+      <h1 class="card-name">My name is <span><%= @pet.name%></span>!</h1>
+      <%= cl_image_tag @pet.photo.key%>
+      <div class="p-2 bd-highlight">
+        <div class="card-info">
+          <h2 class="card-title">Title: <%= @pet.title %></h2>
+          <div class="card-type">
+            - I'm a <strong><%= @pet.pet_type %></strong>, and I'm <strong><%= @pet.age %></strong> years old
+          </div>
+          <div class="card-desc">
+            <i>Description: ''<%= @pet.description %>''</i>
+          </div>
+          <% if @pet.user == current_user %>
+            <%= link_to "EDIT", edit_pet_path, class: "my-btn" %>
+          <% end %>
         </div>
       </div>
     </div>
-  </div>
-  <% unless @pet.user == current_user %>
-  <div class="book-box">
-    <div class="container">
+    <% unless @pet.user == current_user %>
+    <div class="book-box">
+      <div class="container">
 
-      <%= simple_form_for([@pet, @booking]) do |f| %>
-      <h1 class="text-center">New booking</h1>
-        <h5 class="form-title" >From: </h5>
-        <%= f.input :start_date, class: "input_field" %>
-        <h5 class="form-title">To:  </h5>
-        <%= f.input :end_date, class: "input_field" %>
-        <%= f.submit 'BOOK PET' %>
-      <% end %>
+        <%= simple_form_for([@pet, @booking]) do |f| %>
+        <h1 class="text-center">New booking</h1>
+          <h5 class="form-title" >From: </h5>
+          <%= f.input :start_date, class: "input_field" %>
+          <h5 class="form-title">To:  </h5>
+          <%= f.input :end_date, class: "input_field" %>
+          <div class="d-flex justify-content-between">
+            <%= f.submit 'BOOK PET' %>
+            <div class="card-rate">
+              <span class="rounded-pill"><%= @pet.rate %><%= fa_icon "solid dollar"%></span>/day
+            </div>
+          </div>
+
+        <% end %>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
