@@ -90,7 +90,23 @@
   font-weight: bold;
   border-radius: $border-radius-lg 0 $border-radius-lg 0;
 }
-.my-btn a{
+
+.my-submit {
+  input {
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    padding: 10px 14px;
+    margin: 16px 0;
+    background: $dark-gray;
+    color: $white;
+    border: none;
+    font-weight: bold;
+    border-radius: $border-radius-lg 0 $border-radius-lg 0;
+    box-shadow: $shadow;
+  }
+}
+.my-btn a {
   color: #e8e8e8;
   text-decoration: none;
 }
