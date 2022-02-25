@@ -1,12 +1,9 @@
-<h1>Pets#edit</h1>
-<p>Find me in app/views/pets/edit.html.erb</p>
-<%= link_to "back to pet", pet_path  %>
-<%= link_to "destroy_pet", pet_path, method: :delete, data: { confirm: "You sure?" } %>
-<%= simple_form_for(@pet) do |f| %>
-<%= f.input :pet_type %>
-<%= f.input :name %>
-<%= f.input :age %>
-<%= f.input :description %>
-<%= f.input :rate %>
-<%= f.submit %>
-<% end %>
+
+
+<div class="container">
+  <div class="form-center">
+    <%= link_to "back to pet", pet_path, class: "my-btn container" %>
+    <%= render "form", pet: @pet %>
+    <%= link_to "back to pet", pet_path, class: "my-btn" %>
+  </div>
+</div>
