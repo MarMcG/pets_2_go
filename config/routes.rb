@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get 'my_pets', to: 'pets#my_pets', as: :my_pets
 
+  patch '/bookings/:id/confirm', to: 'bookings#confirm', as: 'booking_confirm'
+  patch '/bookings/:id/reject', to: 'bookings#reject', as: 'booking_reject'
+
   resources :my_pets, only: [:show] do
     resources :bookings, only: [:index, :show]
   end

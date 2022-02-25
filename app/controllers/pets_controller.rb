@@ -47,8 +47,9 @@ class PetsController < ApplicationController
   def my_pets
     @pets = Pet.where(user_id: current_user.id)
     @bookings = @pets.map do |pet|
-    [pet, Booking.where(pet: pet)]
+    [pet, Booking.where(pet: pet).where.not(user: current_user)]
     end
+    # raise
   end
 
   private
